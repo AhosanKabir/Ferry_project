@@ -1,0 +1,152 @@
+/* Big screen :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .logo-area img {
+        max-width: 350px;
+    }
+
+    .bar a {
+        margin-right: 47px;
+    }
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .card_Wrapper {
+        margin-bottom: 22px;
+      }
+
+    .bar a {
+        margin-right: 47px;
+    }
+
+    .hero_content_h1{
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .hero_content_p{
+        font-size: 16px;
+    }
+
+    .Vehicle_left img {
+        height: 100%;
+    }
+
+    .vechicle_right_content {
+        padding-top: 45px;
+        padding-bottom: 22px;
+    }
+
+    .explore_content h2{
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .ticket_info_travel{
+        font-size: 30px;
+    }
+
+    .instagram_top .follow_insta{
+        font-size: 30px;
+        max-width: 350px;
+        margin-top: 5px;
+    }
+
+    .footer_first{
+        margin-left: 0;
+    }
+
+    .footer{
+        padding-left: 30px;
+    }
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .card_Wrapper{
+        margin-bottom: 22px;
+    }
+
+    .logo-area img {
+        max-width: 250px;
+    }
+
+    .bar a {
+        margin-right: 36px;
+    }
+
+    .hero_content_h1{
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .hero_content_p{
+        font-size: 16px;
+    }
+
+    .vechicle_right_content {
+        padding-top: 45px;
+        padding-bottom: 42px;
+    }
+
+    .explore_content h2{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .ticket_info_travel{
+        font-size: 30px;
+    }
+
+    .instagram_middle p{
+        margin-right: 5px;
+    }
+
+    .follow_btn{
+        margin-top: 10px;
+        padding: 12px 22px;
+    }
+
+    .instagram_middle{
+        align-items: center;
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .instagram_middle span{
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .footer{
+        padding-left: 20px;
+    }
+    .footer_first{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .footer_top{
+        padding-top: 0;
+        padding-bottom: 30px;
+    } 
+ 
+}
+ 
+/* Large Mobile screen :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+ 
+}

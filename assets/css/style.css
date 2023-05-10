@@ -1,0 +1,847 @@
+/* font family  */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+/* font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+/*   Theme default css */
+
+/* ======font family=========
+
+*/
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 1345px;
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a,
+button {
+  color: inherit;
+  outline: medium none;
+  text-decoration: none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  font-weight: 700;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.pb_150 {
+  padding-bottom: 150px;
+}
+.pb_100 {
+  padding-bottom: 100px;
+}
+.pb_50 {
+  padding-bottom: 50px;
+}
+.pt_150 {
+  padding-top: 150px;
+}
+.pt_100 {
+  padding-top: 100px;
+}
+.pt_50 {
+  padding-top: 50px;
+}
+
+.mb_150 {
+  margin-bottom: 150px;
+}
+.mb_100 {
+  margin-bottom: 100px;
+}
+.mb_50 {
+  margin-bottom: 50px;
+}
+.mt_150 {
+  margin-top: 150px;
+}
+.mt_100 {
+  margin-top: 100px;
+}
+.mt_50 {
+  margin-top: 50px;
+}
+
+.thm_btn {
+}
+
+/* default-css END 
+================================== */
+
+.container {
+  overflow: hidden;
+}
+
+.header-area {
+  padding: 20px 0;
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-area .container {
+  padding-right: 0;
+}
+
+.menu-area {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.menu-area nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu-area nav ul li a {
+  font-size: 16px;
+  display: inline-block;
+  /* margin-left: 60px; */
+  position: relative;
+  color: #fff;
+}
+
+.logo-area img {
+  max-width: 364px;
+}
+
+#nav {
+  text-align: right;
+  background-color: #000;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 27px;
+  width: max-content;
+  margin-left: auto;
+  gap: 32px;
+}
+
+.header_btn {
+  background: #fff;
+  color: #000;
+  min-height: 80px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_btn_mobile{
+  background: #000000;
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+/* humbergar */
+.bar a {
+  width: 35px;
+  height: 35px;
+  float: right;
+  position: relative;
+}
+.bar a span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  display: block;
+  position: relative;
+  top: 17px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.bar a span:before {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  bottom: 10px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.bar a span:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  bottom: -10px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+/* humbarger END */
+
+/* mobile-menu START */
+.mobile-menu {
+  position: fixed;
+  width: 320px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 99;
+  box-shadow: 0px 0px 9px -1px #737373;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  margin-left: -400px;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+.siteBar {
+  margin-left: 0;
+}
+.mobile-menu ul#pills-tab {
+  margin-top: 90px;
+  margin-bottom: 35px !important;
+  display: block;
+}
+
+.mobile-menu nav ul li {
+  list-style: none;
+  display: block;
+}
+
+.mobile-menu nav ul li a {
+  color: #272835;
+  font-size: 16px;
+  line-height: 40px;
+  transition: 0.3s;
+}
+
+.mobile-menu a.bars {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 32px;
+}
+
+
+
+/* Header section END */
+
+/*============ Hero section Area Start =============*/
+
+.hero_section {
+  background: url("../img/hero_bg.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  min-height: 743px;
+  padding-top: 165px;
+}
+
+.hero_content_h1 {
+  font-weight: 500;
+  font-family: "IBM Plex Serif", serif;
+  max-width: 474px;
+  width: 100%;
+  font-size: 96px;
+  line-height: 96px;
+}
+
+.hero_content_p {
+  max-width: 625px;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 63px;
+}
+
+.hero_btn {
+  max-width: 220px;
+  width: 100%;
+  height: 78px;
+  border: 3px solid #ffd6c9;
+  border-radius: 39px;
+  padding: 26px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.hero_btn:hover{
+  background: #fff;
+  color: #000000;
+}
+
+/*============ Hero section Area End =============*/
+
+/*============ticket and card info Area Start =============*/
+
+/* ticket  */
+.card_section {
+  padding-top: 53px;
+  padding-bottom: 89px;
+  position: relative;
+}
+
+.card_section .map_img {
+  position: absolute;
+  z-index: -1;
+  max-width: 80%;
+  top: -65px;
+  left: 100px;
+}
+
+.card_section .container .row {
+  z-index: 1;
+}
+
+.ticket_info_travel {
+  font-family: "IBM Plex Serif", serif;
+  color: #6493c9;
+  padding: 13px 32px 13px 51px;
+  background: #fff;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.ticket_info_exact {
+  background: #296a88;
+  padding: 8px 62px;
+  margin-bottom: 44px;
+  display: inline-block;
+}
+
+/* card start  */
+.card_Wrapper {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 599px;
+  border-radius: 28px;
+  text-align: center;
+  padding-bottom: 53px;
+}
+
+.card_1 {
+  background: url("../img/card_bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 38px;
+}
+
+.card_2 {
+  background: url("../img/card_bg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 61px;
+}
+
+.card_3 {
+  background: url("../img/card_bg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 22px;
+}
+
+.card_Wrapper img {
+}
+
+.card_Wrapper h2 {
+  font-family: "IBM Plex Serif", serif;
+  padding: 41px 0;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+.card_2 h2,
+.card_3 h2 {
+  padding-bottom: 13px;
+}
+
+.card_Wrapper p {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 26px;
+  font-weight: 400;
+}
+
+.card_Wrapper span {
+  display: inline-block;
+  font-size: 57px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 42px;
+}
+
+.card_btn {
+  display: inline-block;
+  border: 3px solid #ffd6c9;
+  color: #ffffff;
+  padding: 22px 50px;
+  border-radius: 39px;
+  transition: all 0.3s;
+}
+
+.card_btn:hover{
+  background: #ffffff;
+  color: #000000;
+}
+/*============ Area End =============*/
+
+/*============Vehicles section Area Start =============*/
+.vehicle_section .container-fluid {
+  padding: 0;
+  overflow: hidden;
+}
+
+.vehicle_section .container-fluid .row > * {
+  padding: 0;
+}
+
+.vehicle_section {
+  background: #1d0909;
+}
+
+.vechicle_right {
+  background: linear-gradient(
+    74.43deg,
+    #dec26f -14.21%,
+    rgba(29, 9, 9, 0) 81.2%
+  );
+  z-index: 1;
+}
+
+.Vehicle_left {
+  z-index: 5;
+}
+
+.vechicle_content {
+  position: relative;
+}
+
+.vechicle_content img {
+  position: absolute;
+  left: -211px;
+  top: 50px;
+  max-width: 600px;
+  z-index: 0;
+}
+
+.vechicle_right_content {
+  position: relative;
+  color: #ffffff;
+  padding: 0 76px;
+  padding-top: 86px;
+}
+
+.vechicle_right_content h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 34px;
+  margin-bottom: 10px;
+}
+
+.vechicle_right_content ul li {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 14px;
+}
+
+.vechicle_right_content ul li:last-child {
+  margin-bottom: 26px;
+}
+
+.vechicle_right_content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 26px;
+}
+
+.explore_content {
+  background: url("../img/Nature.png");
+  min-height: 526px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.explore_content h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 96px;
+  max-width: 932px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+section{
+  overflow: hidden;
+}
+
+.explore_btn {
+  background: #296a88;
+  padding: 8px 100px;
+  margin-bottom: 44px;
+  display: inline-block;
+  color: #ffffff;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.explore_btn:hover {
+  color: #296a88;
+  background: #ffffff;
+}
+
+/*============Vehicles section Area End =============*/
+
+/*============instagram Area Start =============*/
+
+.instagram_section {
+  padding-top: 46px;
+  padding-bottom: 112px;
+}
+
+.instagram_section .container {
+  max-width: 1173px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.instagram_top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 41px;
+}
+
+.instagram_top .follow_insta {
+  font-family: "IBM Plex Serif", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 34px;
+  color: #000000;
+  max-width: 457px;
+  width: 100%;
+  display: inline-block;
+}
+
+.instagram_top .insta_bar {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.instagram_middle {
+  display: flex;
+  align-items: start;
+  margin-bottom: 31px;
+}
+
+.instagram_middle img {
+  max-width: 81px;
+  width: 100%;
+  margin-right: 18px;
+}
+
+.instagram_middle p {
+  margin-bottom: 0;
+  margin-right: 48px;
+}
+
+.follow_btn {
+  background: #ffffff;
+  padding: 23px 29px;
+  display: inline-block;
+  color: #000000;
+  transition: all 0.3s;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 39px;
+  border: 3px solid #000000;
+}
+
+.follow_btn:hover {
+  background: #296a88;
+  color: #ffffff;
+  border: 3px solid #ffd6c9;
+}
+
+/* carousel  */
+
+.owl-nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+
+.owl-prev {
+  width: 50px;
+  height: 50px;
+  background: rgba(217, 217, 217, 0.65);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.owl-next {
+  width: 50px;
+  height: 50px;
+  background: rgba(217, 217, 217, 0.65);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/*============instagram Area End =============*/
+
+/*============ footer Area Start =============*/
+
+.footer {
+  background: #000000;
+}
+
+.footer_top{
+  padding-top: 72px;
+  padding-bottom: 147px;
+}
+
+.footer_logo {
+  max-width: 248px;
+  width: 100%;
+  margin-top: 45px;
+}
+
+.footer_logo img {
+  width: 100%;
+}
+
+.footer_menu{
+  color: #ffffff;
+}
+
+.footer_first{
+  margin-left: 90px;
+}
+
+
+.footer_menu ul li {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 10px;
+  
+}
+
+.footer_menu ul li:hover{
+  color: #4BC6B1;
+}
+
+.footer_menu ul li a{
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer_menu ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer_menu h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 13px;
+}
+
+.footer_right{
+  margin-top: 45px;
+}
+
+.footer_icons {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-top: 82px;
+}
+
+.footer_icons a i{
+  color: #ffffff;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.footer_icons a:hover i{
+  color: #4BC6B1;
+}
+
+.footer_line{
+  display: inline-block;
+  max-width: 1170px;
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.08;
+}
+
+.copyright_text{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+
+}
+
+/*============footer Area End =============*/
+
+/*============ Area Start =============*/
+/*============ Area End =============*/
+
+/*============ Area Start =============*/
+/*============ Area End =============*/
+
+/*============ Area Start =============*/
+/*============ Area End =============*/
+
+/*============ Area Start =============*/
+/*============ Area End =============*/
